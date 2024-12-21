@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: yellowgreen;
+    text-align: center;
+    font-size: 30px;
+}
+
+.con {
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.tictoe {
+    border: 5px solid black;
+    padding: 10px;
+    border-radius: 20px;
+    height: 60vmin;
+    width: 60vmin;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5vmin;
+}
+
+.game {
+    height: 18vmin;
+    width: 18vmin;
+    gap: 1.5vmin;
+    border-radius: 20px;
+    font-size: 8vmin;
+}
+
+#reset {
+    height: 9vh;
+    width: 18vh;
+    border-radius: 20px;
+    display: none;
+}
+
+#newGame {
+    height: 9vh;
+    width: 18vh;
+    border-radius: 20px;
+}
+
+#winnerResult {
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#playerForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35vh;
+    width: 200vh;
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5vmin;
+}
+
+.input-group {
+    margin-bottom: 1.5vmin;
+}
+
+.input-group label {
+    font-size: 1.2rem;
+    margin-bottom: 0.5vmin;
+}
+
+.input-group input {
+    font-size: 1.2rem;
+    padding: 0.8rem;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.btn {
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    width: 270px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 20px;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 24px;
+}
+
+.social-links a {
+    color: #0077B5;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #005582;
+}
+
+.linkedin { color: #0077B5; }
+.github { color: #333; }
+.leetcode { color: #f3a72e; }
+.hide{
+    display: none;
+}
