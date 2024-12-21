@@ -11,9 +11,9 @@ let oplayer = document.querySelector("#oPlayer");
 let btn = document.querySelector(".btn");
 let form = document.querySelector("#playerForm");
 let game = document.querySelector(".tictoe");
-let a1 = ""; // X player name
-let b1 = ""; // O player name
-let count = 0; // To count the moves
+let a1 = ""; 
+let b1 = ""; 
+let count = 0;
 
 const winners = [
     [0, 1, 2],
@@ -36,17 +36,14 @@ boxes.forEach((box) => {
                 box.innerText = "X";
                 playerO = true;
             }
-            box.disabled = true; // Disable the box after it is clicked
-            count++; // Increment move counter
-
-            // Check for winner first
+            box.disabled = true; 
+            count++; 
+            
             if (checkWinner()) {
-                // If there's a winner, disable all boxes
                 for (let box1 of boxes) {
                     box1.disabled = true;
                 }
             } else if (count === 9) {
-                // If all boxes are filled and no winner, it's a draw
                 paraWinnerResult.innerText = "It's a Draw! Try again!";
                 resultHide.classList.remove("hide");
                 reset.style.display = "none";
@@ -65,7 +62,7 @@ reset.addEventListener("click", () => {
     btn.style.display = "flex";
 
     playerO = false;
-    count = 0; // Reset move counter
+    count = 0; 
     reset.style.display ="none";
     game.style.display = "flex";
     disableGameBoxes();
@@ -87,7 +84,7 @@ newGameButton.addEventListener("click", () => {
         box.innerText = "";
     });
     playerO = false;
-    count = 0; // Reset move counter
+    count = 0; 
     reset.style.display = "inline";
 });
 
@@ -99,24 +96,23 @@ const checkWinner = () => {
         if (a !== "" && b !== "" && c !== "") {
             if (a === b && b === c) {
                 console.log("winner", a);
-                showWinner(a === "X" ? a1 : b1); // Show X player or O player name as the winner
+                showWinner(a === "X" ? a1 : b1); 
                 return true;
             }
         }
     }
-    return false; // Return false if there's no winner
+    return false; 
 };
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    a1 = xplayer.value; // X player name
-    b1 = oplayer.value; // O player name
+    a1 = xplayer.value; 
+    b1 = oplayer.value; 
     game.style.display = "flex";
     btn.style.display = "none";
-    count = 0; // Reset move counter for the new game
+    count = 0;
     enableGameBoxes();
-
     console.log(a1);
     console.log(b1);
 });
